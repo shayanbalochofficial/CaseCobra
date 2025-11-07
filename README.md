@@ -29,12 +29,16 @@ Here’s what’s been accomplished so far:
 - **Navbar:** Fully designed and functional  
   - All navigation buttons working  
   - Authentication integrated using **Kinde**
-- **Landing Page:**  
-  - Started building the **first three sections**
+- **App:**  
+  - Started building the **first three sections** of landing page
   - Implemented **icon system** using **Lucide React**
   - Layout structured using **shadcn/ui** and custom wrappers
   - Built Navbar and half Footer at the landing page
   - Completed the whole landing page
+  - Used **uploadthing.com** for uploading images in /app/configure/upload/page.tsx and on /app/uploadthing/core.ts (made changes in core.tsx according to my app)
+  - Working on core.ts and configuring it
+  - Made uploadthing.ts in /src/lib/uploadthing.ts
+
 - **No AI assistance** — all logic, layout, and styling hand-coded by me.
 
 ---

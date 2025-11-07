@@ -4,10 +4,15 @@ import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
 import React, { useState, useTransition } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
 import { Progress } from "@/components/ui/progress";
+import { useUploadThing } from "@/lib/uploadthing";
 
 const Page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
+
+  const { } = useUploadThing("imageUploader", {
+    onClientUploadComplete: ([data]) => { }
+  })
 
   const onDropRejected = () => {};
   const onDropAccepted = () => {
@@ -70,7 +75,7 @@ const Page = () => {
                   </p>
                 ) : (
                   <p>
-                    <span className="font-semibold">Click to Upload </span>{" "} or
+                    <span className="font-semibold">Click to Upload </span> or
                     drag and drop to upload
                   </p>
                 )}
