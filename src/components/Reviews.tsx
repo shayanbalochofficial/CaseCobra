@@ -144,17 +144,19 @@ function ReviewGrid() {
           />{" "}
         </>
       ) : null}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-100" />
     </div>
   );
 }
 
 function Reviews() {
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className='relative max-w-5xl'>
       <img
-        aria-hidden="true"
-        src="/what-people-are-buying.png"
-        className="absolute select-none hidden xl:block -left-32 top-1/3"
+        aria-hidden='true'
+        src='/what-people-are-buying.png'
+        className='absolute select-none hidden xl:block -left-32 top-1/3'
       />
 
       <ReviewGrid />
