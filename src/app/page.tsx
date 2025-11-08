@@ -20,7 +20,7 @@ function Home() {
                 <img src="/snake-1.png" className="w-full" />
               </div>
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
-                Your Image on a{" "}
+                Your Image on a
                 <span className="bg-green-600 px-2 text-white">Custom</span>{" "}
                 Phone Case
               </h1>
@@ -156,7 +156,7 @@ function Home() {
                   <div className="flex gap-1.5 items-center text-zinc-600">
                     <Check className="h-4 w-4 stroke-[3px] text-green-600" />
                     <p className="text-sm">Verified Purchase</p>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ const Page = () => {
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const router = useRouter();
 
-  const { startUpload } = useUploadThing("imageUploader", {
+  const { startUpload, isUploading } = useUploadThing("imageUploader", {
     onClientUploadComplete: ([data]) => {
       const configId = data.serverData.configId;
       startTransition(() => {
@@ -44,7 +44,6 @@ const Page = () => {
     setIsDragOver(false);
   };
 
-  const isUploading = false;
   const [isPending, startTransition] = useTransition();
 
   return (
@@ -71,7 +70,7 @@ const Page = () => {
               className="h-full w-full flex-1 flex flex-col items-center justify-center "
               {...getRootProps()}
             >
-              <input {...getInputProps} className="" />
+              <input {...getInputProps()} className="" />
               {isDragOver ? (
                 <MousePointerSquareDashed className="h-6 w-6 text-zinc-500 mb-2" />
               ) : isUploading || isPending ? (

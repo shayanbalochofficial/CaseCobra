@@ -38,6 +38,9 @@ Here’s what’s been accomplished so far:
   - Used **uploadthing.com** for uploading images in /app/configure/upload/page.tsx and on /app/uploadthing/core.ts (made changes in core.tsx according to my app)
   - Working on core.ts and configuring it
   - Made uploadthing.ts in /src/lib/uploadthing.ts
+  - Faced a lot of errors in uploads page, took a lot of time to solve em
+  - compiled all the user steps to guide the user in a component in src/components/Steps.tsx
+  - completed steps.tsx
 
 - **No AI assistance** — all logic, layout, and styling hand-coded by me.
 
@@ -45,6 +48,7 @@ Here’s what’s been accomplished so far:
 
 ## 🚧 Next Steps
 - Moving towards building uploads page where user can add their pic and get a phone case demo
+- connecting database using neon and core.ts
 
 ---
 
@@ -85,3 +89,6 @@ Currently focused on **Agentic AI** and real-world SaaS applications.
 ---
 
 ⭐ _“Every line of code here is a brick in the empire I’m building.”_
+
+
+
