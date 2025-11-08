@@ -1,7 +1,12 @@
 const page = async () => {
-    // /make db call
+  // /make db call
 
   return <p></p>;
 };
 
 export default page;
+
+//height
+//width
+//url
+//croppedImageUrl
