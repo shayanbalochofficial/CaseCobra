@@ -25,7 +25,7 @@ const Page = () => {
       setUploadProgress(p);
     },
   });
-
+ 
   const onDropRejected = (rejectedFiles: FileRejection[]) => {
     const [file] = rejectedFiles;
 

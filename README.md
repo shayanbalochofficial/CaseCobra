@@ -41,6 +41,7 @@ Here’s what’s been accomplished so far:
   - Faced a lot of errors in uploads page, took a lot of time to solve em
   - compiled all the user steps to guide the user in a component in src/components/Steps.tsx
   - completed steps.tsx
+  - installed prisma, connected using neon.tech (hehe really enjoying building this) 
 
 - **No AI assistance** — all logic, layout, and styling hand-coded by me.
 
