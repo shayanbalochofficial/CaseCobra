@@ -40,6 +40,7 @@ export type ConfigurationMinAggregateOutputType = {
   id: string | null
   width: number | null
   height: number | null
+  imageUrl: string | null
   croppedImageUrl: string | null
 }
 
@@ -47,6 +48,7 @@ export type ConfigurationMaxAggregateOutputType = {
   id: string | null
   width: number | null
   height: number | null
+  imageUrl: string | null
   croppedImageUrl: string | null
 }
 
@@ -54,6 +56,7 @@ export type ConfigurationCountAggregateOutputType = {
   id: number
   width: number
   height: number
+  imageUrl: number
   croppedImageUrl: number
   _all: number
 }
@@ -73,6 +76,7 @@ export type ConfigurationMinAggregateInputType = {
   id?: true
   width?: true
   height?: true
+  imageUrl?: true
   croppedImageUrl?: true
 }
 
@@ -80,6 +84,7 @@ export type ConfigurationMaxAggregateInputType = {
   id?: true
   width?: true
   height?: true
+  imageUrl?: true
   croppedImageUrl?: true
 }
 
@@ -87,6 +92,7 @@ export type ConfigurationCountAggregateInputType = {
   id?: true
   width?: true
   height?: true
+  imageUrl?: true
   croppedImageUrl?: true
   _all?: true
 }
@@ -181,6 +187,7 @@ export type ConfigurationGroupByOutputType = {
   id: string
   width: number
   height: number
+  imageUrl: string
   croppedImageUrl: string | null
   _count: ConfigurationCountAggregateOutputType | null
   _avg: ConfigurationAvgAggregateOutputType | null
@@ -211,6 +218,7 @@ export type ConfigurationWhereInput = {
   id?: Prisma.StringFilter<"Configuration"> | string
   width?: Prisma.IntFilter<"Configuration"> | number
   height?: Prisma.IntFilter<"Configuration"> | number
+  imageUrl?: Prisma.StringFilter<"Configuration"> | string
   croppedImageUrl?: Prisma.StringNullableFilter<"Configuration"> | string | null
 }
 
@@ -218,6 +226,7 @@ export type ConfigurationOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   width?: Prisma.SortOrder
   height?: Prisma.SortOrder
+  imageUrl?: Prisma.SortOrder
   croppedImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
 }
 
@@ -228,6 +237,7 @@ export type ConfigurationWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.ConfigurationWhereInput | Prisma.ConfigurationWhereInput[]
   width?: Prisma.IntFilter<"Configuration"> | number
   height?: Prisma.IntFilter<"Configuration"> | number
+  imageUrl?: Prisma.StringFilter<"Configuration"> | string
   croppedImageUrl?: Prisma.StringNullableFilter<"Configuration"> | string | null
 }, "id">
 
@@ -235,6 +245,7 @@ export type ConfigurationOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   width?: Prisma.SortOrder
   height?: Prisma.SortOrder
+  imageUrl?: Prisma.SortOrder
   croppedImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.ConfigurationCountOrderByAggregateInput
   _avg?: Prisma.ConfigurationAvgOrderByAggregateInput
@@ -250,6 +261,7 @@ export type ConfigurationScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"Configuration"> | string
   width?: Prisma.IntWithAggregatesFilter<"Configuration"> | number
   height?: Prisma.IntWithAggregatesFilter<"Configuration"> | number
+  imageUrl?: Prisma.StringWithAggregatesFilter<"Configuration"> | string
   croppedImageUrl?: Prisma.StringNullableWithAggregatesFilter<"Configuration"> | string | null
 }
 
@@ -257,6 +269,7 @@ export type ConfigurationCreateInput = {
   id?: string
   width: number
   height: number
+  imageUrl: string
   croppedImageUrl?: string | null
 }
 
@@ -264,6 +277,7 @@ export type ConfigurationUncheckedCreateInput = {
   id?: string
   width: number
   height: number
+  imageUrl: string
   croppedImageUrl?: string | null
 }
 
@@ -271,6 +285,7 @@ export type ConfigurationUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   width?: Prisma.IntFieldUpdateOperationsInput | number
   height?: Prisma.IntFieldUpdateOperationsInput | number
+  imageUrl?: Prisma.StringFieldUpdateOperationsInput | string
   croppedImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -278,6 +293,7 @@ export type ConfigurationUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   width?: Prisma.IntFieldUpdateOperationsInput | number
   height?: Prisma.IntFieldUpdateOperationsInput | number
+  imageUrl?: Prisma.StringFieldUpdateOperationsInput | string
   croppedImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -285,6 +301,7 @@ export type ConfigurationCreateManyInput = {
   id?: string
   width: number
   height: number
+  imageUrl: string
   croppedImageUrl?: string | null
 }
 
@@ -292,6 +309,7 @@ export type ConfigurationUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   width?: Prisma.IntFieldUpdateOperationsInput | number
   height?: Prisma.IntFieldUpdateOperationsInput | number
+  imageUrl?: Prisma.StringFieldUpdateOperationsInput | string
   croppedImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -299,6 +317,7 @@ export type ConfigurationUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   width?: Prisma.IntFieldUpdateOperationsInput | number
   height?: Prisma.IntFieldUpdateOperationsInput | number
+  imageUrl?: Prisma.StringFieldUpdateOperationsInput | string
   croppedImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -306,6 +325,7 @@ export type ConfigurationCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   width?: Prisma.SortOrder
   height?: Prisma.SortOrder
+  imageUrl?: Prisma.SortOrder
   croppedImageUrl?: Prisma.SortOrder
 }
 
@@ -318,6 +338,7 @@ export type ConfigurationMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   width?: Prisma.SortOrder
   height?: Prisma.SortOrder
+  imageUrl?: Prisma.SortOrder
   croppedImageUrl?: Prisma.SortOrder
 }
 
@@ -325,6 +346,7 @@ export type ConfigurationMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   width?: Prisma.SortOrder
   height?: Prisma.SortOrder
+  imageUrl?: Prisma.SortOrder
   croppedImageUrl?: Prisma.SortOrder
 }
 
@@ -355,6 +377,7 @@ export type ConfigurationSelect<ExtArgs extends runtime.Types.Extensions.Interna
   id?: boolean
   width?: boolean
   height?: boolean
+  imageUrl?: boolean
   croppedImageUrl?: boolean
 }, ExtArgs["result"]["configuration"]>
 
@@ -362,6 +385,7 @@ export type ConfigurationSelectCreateManyAndReturn<ExtArgs extends runtime.Types
   id?: boolean
   width?: boolean
   height?: boolean
+  imageUrl?: boolean
   croppedImageUrl?: boolean
 }, ExtArgs["result"]["configuration"]>
 
@@ -369,6 +393,7 @@ export type ConfigurationSelectUpdateManyAndReturn<ExtArgs extends runtime.Types
   id?: boolean
   width?: boolean
   height?: boolean
+  imageUrl?: boolean
   croppedImageUrl?: boolean
 }, ExtArgs["result"]["configuration"]>
 
@@ -376,10 +401,11 @@ export type ConfigurationSelectScalar = {
   id?: boolean
   width?: boolean
   height?: boolean
+  imageUrl?: boolean
   croppedImageUrl?: boolean
 }
 
-export type ConfigurationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "width" | "height" | "croppedImageUrl", ExtArgs["result"]["configuration"]>
+export type ConfigurationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "width" | "height" | "imageUrl" | "croppedImageUrl", ExtArgs["result"]["configuration"]>
 
 export type $ConfigurationPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Configuration"
@@ -388,6 +414,7 @@ export type $ConfigurationPayload<ExtArgs extends runtime.Types.Extensions.Inter
     id: string
     width: number
     height: number
+    imageUrl: string
     croppedImageUrl: string | null
   }, ExtArgs["result"]["configuration"]>
   composites: {}
@@ -815,6 +842,7 @@ export interface ConfigurationFieldRefs {
   readonly id: Prisma.FieldRef<"Configuration", 'String'>
   readonly width: Prisma.FieldRef<"Configuration", 'Int'>
   readonly height: Prisma.FieldRef<"Configuration", 'Int'>
+  readonly imageUrl: Prisma.FieldRef<"Configuration", 'String'>
   readonly croppedImageUrl: Prisma.FieldRef<"Configuration", 'String'>
 }
     

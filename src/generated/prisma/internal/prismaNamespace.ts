@@ -527,6 +527,7 @@ export const ConfigurationScalarFieldEnum = {
   id: 'id',
   width: 'width',
   height: 'height',
+  imageUrl: 'imageUrl',
   croppedImageUrl: 'croppedImageUrl'
 } as const
 
