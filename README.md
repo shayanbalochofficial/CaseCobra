@@ -27,13 +27,6 @@ To get started with this project, run
   git clone https://github.com/shayanbalochofficial/casecobra.git
 ```
 
-and copy the .env.example variables into a separate .env file, fill them out & and that's all you need to get started!
-
-
-## Acknowledgements
-
-- [Kinde](https://link.joshtriedcoding.com/kinde) for making this project possible
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
