@@ -23,6 +23,8 @@ const Page = async ({ searchParams }: PageProps) => {
     return notFound()
   }
 
+  //baby i wud die for u (hehe)
+
   const { imageUrl, width, height } = configuration
 
   return (
