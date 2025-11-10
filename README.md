@@ -5,7 +5,7 @@ Built with the Next.js App Router, Postgres, TypeScript, Tailwind & Kinde Auth
 
 ## Features
 
-- 🛠️ Complete shop built from scratch in Next.js 14
+- 🛠️ Complete shop built from scratch 
 - 💻 Beautiful landing page included
 - 🎨 Custom artworks made by a professional illustrator
 - 💳 Secret admin dashboard to manage orders
