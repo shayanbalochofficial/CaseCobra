@@ -1,3 +1,5 @@
+//Finalised All Yessir
+// These errors r gonna kill me someday 😭
 generator client {
   provider = "prisma-client-js"
 }
