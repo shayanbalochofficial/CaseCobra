@@ -1,3 +1,4 @@
+// src/app/api/uploadthing/core.ts
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { z } from "zod";
 import sharp from "sharp";
@@ -8,40 +9,30 @@ const f = createUploadthing();
 export const ourFileRouter = {
   imageUploader: f({ image: { maxFileSize: "4MB" } })
     .input(z.object({ configId: z.string().optional() }))
-    .middleware(async ({ input }) => {
-      return { input };
-    })
+    .middleware(async ({ input }) => ({ input }))
     .onUploadComplete(async ({ metadata, file }) => {
       const { configId } = metadata.input;
 
       const res = await fetch(file.url);
       const buffer = await res.arrayBuffer();
-
-      const imgMetadata = await sharp(buffer).metadata();
-      const { width, height } = imgMetadata;
+      const { width, height } = await sharp(buffer).metadata();
 
       if (!configId) {
-        const configuration = await db.configuration.create({
+        const config = await db.configuration.create({
           data: {
             imageUrl: file.url,
-            height: height || 500,
-            width: width || 500,
+            height: height ?? 500,
+            width: width ?? 500,
           },
         });
-
-        return { configId: configuration.id };
-      } else {
-        const updatedConfiguration = await db.configuration.update({
-          where: {
-            id: configId,
-          },
-          data: {
-            croppedImageUrl: file.url,
-          },
-        });
-
-        return { configId: updatedConfiguration.id };
+        return { configId: config.id };
       }
+
+      const config = await db.configuration.update({
+        where: { id: configId },
+        data: { croppedImageUrl: file.url },
+      });
+      return { configId: config.id };
     }),
 } satisfies FileRouter;
 

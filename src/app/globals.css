@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Add to your globals.css */
+@keyframes wave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-25%); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Apply animations */
+.animate-wave {
+  animation: wave 20s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
